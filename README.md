@@ -15,6 +15,16 @@ In my version of the clock, it comes with a 10x10x10cm  acryl plasic case.
 * mini speaker
 * 5 320 Ohm Pull-UP-Resistors
 
+# TOOLS
+* Solder equipment
+* Knife
+* Arcyl Glue
+* Hotglue
+* Wires
+* Drill 6mm (depend on your button size)
+* Dill 3mm (for the power cable-9
+
+
 # PARTS CASE (10x10x10cm)
 * 1 90x100x3mm LED PLATE
 * 2 106x106x3mm at 75% transparency, FRONT PLATE
@@ -46,8 +56,10 @@ Now we are finih with the soldering, now we are building the case
 
 * Drill to the BACK PLATE 4 holes for the switches: SET_ALARM, SET_TIME, ADD, SUB
 * Drill a hole to the center of the TOP PLATE for the SONE switch
+* Drill a second hole into the TOP PLATE for the speaker
 * Drill a small hole into one of the bottom corners of the BACK PLATE for the power cable
 * Place the switches at the right holes
+* Glue the speaker next to the second hole of the TOP PLATE
 * Glue the LED PLATE to the FRONT PLATE
 * Glue the Arduino and the RTC Module to the back of the LED PLATE
 * Assemble the other Plate around the bottom plate to get a cube
