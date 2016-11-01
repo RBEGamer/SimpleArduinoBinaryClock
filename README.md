@@ -1,4 +1,4 @@
-# SimpleArduinoBinaryClockhttps://github.com/RBEGamer/SimpleArduinoBinaryClock
+# SimpleArduinoBinaryClock
 Arduino based binary clock with hours and minutes display, nightmode and alarm.
 It uses a Arsuino Nano and the WS2812 Leds,to show the time in a binary format.
 The time, alarm time and nightmode time, can be set by the 4 switches on the back of the clock.
