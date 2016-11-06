@@ -74,8 +74,9 @@ Have FUN!
 
 Deatiled images of the build process, can be found at the /IMAGES folder
 
-
-
+### FINAL CLOCK
 ![Gopher image](BILDER/Foto 12.11.14 22 25 32.jpg)
+### Final hardware with connected buttons
 ![Gopher image](BILDER/Foto 11.11.14 00 32 51.jpg)
+### placed WS2812 LED Strips
 ![Gopher image](BILDER/Foto 10.11.14 13 44 19.jpg)
