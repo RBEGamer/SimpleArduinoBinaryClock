@@ -67,6 +67,8 @@ Now we are finih with the soldering, now we are building the case
 Now your clock is ready to use!!
 Have FUN!
 
+# SCHEMATIC AND PCB
+I am currently working on a pcb for the clock. The KICAT file can be found at `src/bin_clock_kicad/`.
 
 
 
