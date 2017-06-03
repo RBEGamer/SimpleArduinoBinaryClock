@@ -28,6 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:1655
 LIBS:bin_clock-cache
 EELAYER 25 0
 EELAYER END
@@ -110,31 +111,59 @@ F 3 "" H 1950 1800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5950 1350 6750 1350
+	5950 1350 6250 1350
+Wire Wire Line
+	6250 1350 6400 1350
+Wire Wire Line
+	6400 1350 6500 1350
+Wire Wire Line
+	6500 1350 6750 1350
 Connection ~ 6250 1350
 Connection ~ 6500 1350
 Wire Wire Line
 	5950 3950 4350 3950
 Wire Wire Line
-	5950 1650 5950 3950
+	5950 1650 5950 1700
+Wire Wire Line
+	5950 1700 5950 3950
 Wire Wire Line
 	6250 4050 4350 4050
 Wire Wire Line
-	6250 1650 6250 4050
+	6250 1650 6250 2000
+Wire Wire Line
+	6250 2000 6250 4050
 Wire Wire Line
 	6500 4150 4350 4150
 Wire Wire Line
-	6500 1650 6500 4150
+	6500 1650 6500 2300
+Wire Wire Line
+	6500 2300 6500 4150
 Wire Wire Line
 	6750 4250 4350 4250
 Wire Wire Line
-	6750 1650 6750 4250
+	6750 1650 6750 2600
 Wire Wire Line
-	1950 1950 2350 1950
+	6750 2600 6750 4250
+Wire Wire Line
+	1950 1950 2200 1950
+Wire Wire Line
+	2200 1950 2350 1950
 Wire Wire Line
 	3150 1100 3150 1650
 Wire Wire Line
-	1400 1100 6400 1100
+	1400 1100 1950 1100
+Wire Wire Line
+	1950 1100 2000 1100
+Wire Wire Line
+	2000 1100 3150 1100
+Wire Wire Line
+	3150 1100 3250 1100
+Wire Wire Line
+	3250 1100 3350 1100
+Wire Wire Line
+	3350 1100 5050 1100
+Wire Wire Line
+	5050 1100 6400 1100
 Wire Wire Line
 	1950 1100 1950 1650
 Wire Wire Line
@@ -147,14 +176,28 @@ Connection ~ 3350 1100
 Wire Wire Line
 	3150 5650 3150 5900
 Wire Wire Line
-	1500 5900 6550 5900
+	1500 5900 3150 5900
+Wire Wire Line
+	3150 5900 3350 5900
+Wire Wire Line
+	3350 5900 4850 5900
+Wire Wire Line
+	4850 5900 6550 5900
 Wire Wire Line
 	3350 5900 3350 5650
 Wire Wire Line
 	1950 1100 2000 1100
 Connection ~ 2000 1100
 Wire Wire Line
-	1500 1450 1500 5900
+	1500 1450 1500 2350
+Wire Wire Line
+	1500 2350 1500 2750
+Wire Wire Line
+	1500 2750 1500 3700
+Wire Wire Line
+	1500 3700 1500 3850
+Wire Wire Line
+	1500 3850 1500 5900
 Connection ~ 3150 5900
 $Comp
 L GND #PWR01
@@ -203,7 +246,11 @@ F 3 "" H 5400 4750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4850 2900 4850 5900
+	4850 2900 4850 3450
+Wire Wire Line
+	4850 3450 4850 4750
+Wire Wire Line
+	4850 4750 4850 5900
 Wire Wire Line
 	4850 4750 5200 4750
 Connection ~ 3350 5900
@@ -251,10 +298,14 @@ $EndComp
 Wire Wire Line
 	2150 2350 2150 2400
 Wire Wire Line
-	1900 2350 2350 2350
+	1900 2350 2150 2350
+Wire Wire Line
+	2150 2350 2350 2350
 Connection ~ 2150 2350
 Wire Wire Line
-	1900 2750 2350 2750
+	1900 2750 2150 2750
+Wire Wire Line
+	2150 2750 2350 2750
 Wire Wire Line
 	2150 2750 2150 2700
 Connection ~ 2150 2750
@@ -276,7 +327,9 @@ Wire Wire Line
 	2200 1550 2400 1550
 Connection ~ 2200 1950
 Wire Wire Line
-	1500 1450 2400 1450
+	1500 1450 2200 1450
+Wire Wire Line
+	2200 1450 2400 1450
 Connection ~ 1500 3700
 $Comp
 L CONN_01X02 J7
@@ -337,7 +390,13 @@ Connection ~ 6750 2600
 Wire Wire Line
 	7000 2700 7200 2700
 Wire Wire Line
-	7000 1200 7000 2700
+	7000 1200 7000 1800
+Wire Wire Line
+	7000 1800 7000 2100
+Wire Wire Line
+	7000 2100 7000 2400
+Wire Wire Line
+	7000 2400 7000 2700
 Wire Wire Line
 	7000 2400 7200 2400
 Wire Wire Line
@@ -375,9 +434,13 @@ Wire Wire Line
 	5200 3450 4850 3450
 Connection ~ 4850 4750
 Wire Wire Line
-	5000 3550 5200 3550
+	5000 3550 5050 3550
 Wire Wire Line
-	5050 1100 5050 3550
+	5050 3550 5200 3550
+Wire Wire Line
+	5050 1100 5050 2700
+Wire Wire Line
+	5050 2700 5050 3550
 Connection ~ 5050 1100
 Text Notes 7600 1800 0    99   ~ 0
 UP SWITCH\n
@@ -449,7 +512,13 @@ Wire Wire Line
 	1950 5800 1950 1950
 Connection ~ 1950 1950
 Wire Wire Line
-	1400 3500 1400 1100
+	1400 3500 1400 3150
+Wire Wire Line
+	1400 3150 1400 2700
+Wire Wire Line
+	1400 2700 1400 2450
+Wire Wire Line
+	1400 2450 1400 1100
 Wire Wire Line
 	1600 2350 1500 2350
 Connection ~ 1500 2350
@@ -514,7 +583,9 @@ Connection ~ 1400 2700
 Wire Wire Line
 	1000 2450 850  2450
 Wire Wire Line
-	850  2450 850  3850
+	850  2450 850  2700
+Wire Wire Line
+	850  2700 850  3850
 Wire Wire Line
 	850  2700 1000 2700
 Wire Wire Line
@@ -550,4 +621,196 @@ Wire Wire Line
 	4350 5050 4500 5050
 Wire Wire Line
 	4500 5050 4500 5550
+$Comp
+L 1655 D?
+U 1 1 5931DC84
+P 10350 -550
+F 0 "D?" H 9950 -100 50  0000 L BNN
+F 1 "1655" H 9950 -1050 50  0000 L BNN
+F 2 "FCI_1655" H 10350 -550 50  0001 L BNN
+F 3 "None" H 10350 -550 50  0001 L BNN
+F 4 "Adafruit Industries" H 10350 -550 50  0001 L BNN "MF"
+F 5 "4.16 USD" H 10350 -550 50  0001 L BNN "Price"
+F 6 "Good" H 10350 -550 50  0001 L BNN "Availability"
+F 7 "Ws2812b 5050 Rgb Led With Integrated Driver Chip Pack Of 10" H 10350 -550 50  0001 L BNN "Description"
+F 8 "1655" H 10350 -550 50  0001 L BNN "MP"
+	1    10350 -550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 1655 D?
+U 1 1 5931DD72
+P 10350 1900
+F 0 "D?" H 9950 2350 50  0000 L BNN
+F 1 "1655" H 9950 1400 50  0000 L BNN
+F 2 "FCI_1655" H 10350 1900 50  0001 L BNN
+F 3 "None" H 10350 1900 50  0001 L BNN
+F 4 "Adafruit Industries" H 10350 1900 50  0001 L BNN "MF"
+F 5 "4.16 USD" H 10350 1900 50  0001 L BNN "Price"
+F 6 "Good" H 10350 1900 50  0001 L BNN "Availability"
+F 7 "Ws2812b 5050 Rgb Led With Integrated Driver Chip Pack Of 10" H 10350 1900 50  0001 L BNN "Description"
+F 8 "1655" H 10350 1900 50  0001 L BNN "MP"
+	1    10350 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 1655 D?
+U 1 1 5931DE07
+P 10350 2800
+F 0 "D?" H 9950 3250 50  0000 L BNN
+F 1 "1655" H 9950 2300 50  0000 L BNN
+F 2 "FCI_1655" H 10350 2800 50  0001 L BNN
+F 3 "None" H 10350 2800 50  0001 L BNN
+F 4 "Adafruit Industries" H 10350 2800 50  0001 L BNN "MF"
+F 5 "4.16 USD" H 10350 2800 50  0001 L BNN "Price"
+F 6 "Good" H 10350 2800 50  0001 L BNN "Availability"
+F 7 "Ws2812b 5050 Rgb Led With Integrated Driver Chip Pack Of 10" H 10350 2800 50  0001 L BNN "Description"
+F 8 "1655" H 10350 2800 50  0001 L BNN "MP"
+	1    10350 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 1655 D?
+U 1 1 5931DEA0
+P 10350 3700
+F 0 "D?" H 9950 4150 50  0000 L BNN
+F 1 "1655" H 9950 3200 50  0000 L BNN
+F 2 "FCI_1655" H 10350 3700 50  0001 L BNN
+F 3 "None" H 10350 3700 50  0001 L BNN
+F 4 "Adafruit Industries" H 10350 3700 50  0001 L BNN "MF"
+F 5 "4.16 USD" H 10350 3700 50  0001 L BNN "Price"
+F 6 "Good" H 10350 3700 50  0001 L BNN "Availability"
+F 7 "Ws2812b 5050 Rgb Led With Integrated Driver Chip Pack Of 10" H 10350 3700 50  0001 L BNN "Description"
+F 8 "1655" H 10350 3700 50  0001 L BNN "MP"
+	1    10350 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 1655 D?
+U 1 1 5931DF29
+P 8950 -550
+F 0 "D?" H 8550 -100 50  0000 L BNN
+F 1 "1655" H 8550 -1050 50  0000 L BNN
+F 2 "FCI_1655" H 8950 -550 50  0001 L BNN
+F 3 "None" H 8950 -550 50  0001 L BNN
+F 4 "Adafruit Industries" H 8950 -550 50  0001 L BNN "MF"
+F 5 "4.16 USD" H 8950 -550 50  0001 L BNN "Price"
+F 6 "Good" H 8950 -550 50  0001 L BNN "Availability"
+F 7 "Ws2812b 5050 Rgb Led With Integrated Driver Chip Pack Of 10" H 8950 -550 50  0001 L BNN "Description"
+F 8 "1655" H 8950 -550 50  0001 L BNN "MP"
+	1    8950 -550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 1655 D?
+U 1 1 5931E1C6
+P 10350 4650
+F 0 "D?" H 9950 5100 50  0000 L BNN
+F 1 "1655" H 9950 4150 50  0000 L BNN
+F 2 "FCI_1655" H 10350 4650 50  0001 L BNN
+F 3 "None" H 10350 4650 50  0001 L BNN
+F 4 "Adafruit Industries" H 10350 4650 50  0001 L BNN "MF"
+F 5 "4.16 USD" H 10350 4650 50  0001 L BNN "Price"
+F 6 "Good" H 10350 4650 50  0001 L BNN "Availability"
+F 7 "Ws2812b 5050 Rgb Led With Integrated Driver Chip Pack Of 10" H 10350 4650 50  0001 L BNN "Description"
+F 8 "1655" H 10350 4650 50  0001 L BNN "MP"
+	1    10350 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L 1655 D?
+U 1 1 5931E272
+P 12650 -650
+F 0 "D?" H 12250 -200 50  0000 L BNN
+F 1 "1655" H 12250 -1150 50  0000 L BNN
+F 2 "FCI_1655" H 12650 -650 50  0001 L BNN
+F 3 "None" H 12650 -650 50  0001 L BNN
+F 4 "Adafruit Industries" H 12650 -650 50  0001 L BNN "MF"
+F 5 "4.16 USD" H 12650 -650 50  0001 L BNN "Price"
+F 6 "Good" H 12650 -650 50  0001 L BNN "Availability"
+F 7 "Ws2812b 5050 Rgb Led With Integrated Driver Chip Pack Of 10" H 12650 -650 50  0001 L BNN "Description"
+F 8 "1655" H 12650 -650 50  0001 L BNN "MP"
+	1    12650 -650
+	1    0    0    -1  
+$EndComp
+$Comp
+L 1655 D?
+U 1 1 5931E317
+P 16450 5850
+F 0 "D?" H 16050 6300 50  0000 L BNN
+F 1 "1655" H 16050 5350 50  0000 L BNN
+F 2 "FCI_1655" H 16450 5850 50  0001 L BNN
+F 3 "None" H 16450 5850 50  0001 L BNN
+F 4 "Adafruit Industries" H 16450 5850 50  0001 L BNN "MF"
+F 5 "4.16 USD" H 16450 5850 50  0001 L BNN "Price"
+F 6 "Good" H 16450 5850 50  0001 L BNN "Availability"
+F 7 "Ws2812b 5050 Rgb Led With Integrated Driver Chip Pack Of 10" H 16450 5850 50  0001 L BNN "Description"
+F 8 "1655" H 16450 5850 50  0001 L BNN "MP"
+	1    16450 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L 1655 D?
+U 1 1 5931E3EB
+P 12050 1900
+F 0 "D?" H 11650 2350 50  0000 L BNN
+F 1 "1655" H 11650 1400 50  0000 L BNN
+F 2 "FCI_1655" H 12050 1900 50  0001 L BNN
+F 3 "None" H 12050 1900 50  0001 L BNN
+F 4 "Adafruit Industries" H 12050 1900 50  0001 L BNN "MF"
+F 5 "4.16 USD" H 12050 1900 50  0001 L BNN "Price"
+F 6 "Good" H 12050 1900 50  0001 L BNN "Availability"
+F 7 "Ws2812b 5050 Rgb Led With Integrated Driver Chip Pack Of 10" H 12050 1900 50  0001 L BNN "Description"
+F 8 "1655" H 12050 1900 50  0001 L BNN "MP"
+	1    12050 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 1655 D?
+U 1 1 5931E616
+P 12050 2800
+F 0 "D?" H 11650 3250 50  0000 L BNN
+F 1 "1655" H 11650 2300 50  0000 L BNN
+F 2 "FCI_1655" H 12050 2800 50  0001 L BNN
+F 3 "None" H 12050 2800 50  0001 L BNN
+F 4 "Adafruit Industries" H 12050 2800 50  0001 L BNN "MF"
+F 5 "4.16 USD" H 12050 2800 50  0001 L BNN "Price"
+F 6 "Good" H 12050 2800 50  0001 L BNN "Availability"
+F 7 "Ws2812b 5050 Rgb Led With Integrated Driver Chip Pack Of 10" H 12050 2800 50  0001 L BNN "Description"
+F 8 "1655" H 12050 2800 50  0001 L BNN "MP"
+	1    12050 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 1655 D?
+U 1 1 5931E7C2
+P 12050 3700
+F 0 "D?" H 11650 4150 50  0000 L BNN
+F 1 "1655" H 11650 3200 50  0000 L BNN
+F 2 "FCI_1655" H 12050 3700 50  0001 L BNN
+F 3 "None" H 12050 3700 50  0001 L BNN
+F 4 "Adafruit Industries" H 12050 3700 50  0001 L BNN "MF"
+F 5 "4.16 USD" H 12050 3700 50  0001 L BNN "Price"
+F 6 "Good" H 12050 3700 50  0001 L BNN "Availability"
+F 7 "Ws2812b 5050 Rgb Led With Integrated Driver Chip Pack Of 10" H 12050 3700 50  0001 L BNN "Description"
+F 8 "1655" H 12050 3700 50  0001 L BNN "MP"
+	1    12050 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 1655 D?
+U 1 1 5931E864
+P 12050 4600
+F 0 "D?" H 11650 5050 50  0000 L BNN
+F 1 "1655" H 11650 4100 50  0000 L BNN
+F 2 "FCI_1655" H 12050 4600 50  0001 L BNN
+F 3 "None" H 12050 4600 50  0001 L BNN
+F 4 "Adafruit Industries" H 12050 4600 50  0001 L BNN "MF"
+F 5 "4.16 USD" H 12050 4600 50  0001 L BNN "Price"
+F 6 "Good" H 12050 4600 50  0001 L BNN "Availability"
+F 7 "Ws2812b 5050 Rgb Led With Integrated Driver Chip Pack Of 10" H 12050 4600 50  0001 L BNN "Description"
+F 8 "1655" H 12050 4600 50  0001 L BNN "MP"
+	1    12050 4600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
