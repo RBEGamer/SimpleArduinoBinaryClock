@@ -1,4 +1,4 @@
-update=Samstag, 03. Juni 2017 'u36' 22:36:05
+update=Samstag, 03. Juni 2017 'u29' 23:29:33
 version=1
 last_client=kicad
 [pcbnew]
@@ -22,6 +22,9 @@ BoardOutlineThickness=0.100000000000
 ModuleOutlineThickness=0.150000000000
 [general]
 version=1
+[cvpcb]
+version=1
+NetIExt=net
 [eeschema]
 version=1
 LibDir=
@@ -56,6 +59,5 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=1655
-[cvpcb]
-version=1
-NetIExt=net
+LibName31=ATMEGA328P-AU/ATMEGA328P-AU
+LibName32=DS1307Z_/DS1307Z_
