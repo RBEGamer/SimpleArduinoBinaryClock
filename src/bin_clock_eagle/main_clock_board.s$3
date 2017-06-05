@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -6251,6 +6251,75 @@ Metric Code Size 5664</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="supply2" urn="urn:adsk.eagle:library:372">
+<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
+GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
+Please keep in mind, that these devices are necessary for the
+automatic wiring of the supply signals.&lt;p&gt;
+The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
+In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="GND" library_version="1">
+<wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="0" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.27" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<text x="-1.905" y="-3.175" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="GND" prefix="SUPPLY" library_version="1">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="GND" symbol="GND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="supply1" urn="urn:adsk.eagle:library:371">
+<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
+ GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
+ Please keep in mind, that these devices are necessary for the
+ automatic wiring of the supply signals.&lt;p&gt;
+ The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
+ In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
+ &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="VCC" library_version="1">
+<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="VCC" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="VCC" prefix="P+" library_version="1">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="VCC" symbol="VCC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -6312,6 +6381,9 @@ Metric Code Size 5664</description>
 <part name="C2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0603"/>
 <part name="C3" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="025-024X044"/>
 <part name="C4" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="025-024X044"/>
+<part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6381,12 +6453,15 @@ XTAILS CAPS</text>
 <instance part="R27" gate="G$1" x="-238.76" y="-7.62" rot="R90"/>
 <instance part="R28" gate="G$1" x="-127" y="25.4" rot="R90"/>
 <instance part="R2" gate="G$1" x="-243.84" y="-7.62" rot="R90"/>
-<instance part="R3" gate="G$1" x="-223.52" y="-10.16" rot="R90"/>
+<instance part="R3" gate="G$1" x="-226.06" y="-10.16" rot="R90"/>
 <instance part="Q2" gate="G$1" x="-198.12" y="-7.62" rot="R90"/>
 <instance part="C1" gate="G$1" x="-208.28" y="-5.08" rot="R270"/>
 <instance part="C2" gate="G$1" x="-208.28" y="-10.16" rot="R270"/>
 <instance part="C3" gate="G$1" x="-137.16" y="55.88" rot="R90"/>
 <instance part="C4" gate="G$1" x="-124.46" y="55.88" rot="R90"/>
+<instance part="SUPPLY1" gate="GND" x="-137.16" y="-40.64"/>
+<instance part="P+1" gate="VCC" x="-160.02" y="53.34"/>
+<instance part="P+2" gate="VCC" x="-167.64" y="33.02"/>
 </instances>
 <busses>
 </busses>
@@ -6689,6 +6764,8 @@ XTAILS CAPS</text>
 <wire x1="-215.9" y1="10.16" x2="-215.9" y2="-25.4" width="0.1524" layer="91"/>
 <junction x="-215.9" y="-25.4"/>
 <pinref part="J7" gate="G$1" pin="2"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="-226.06" y1="-15.24" x2="-223.52" y2="-15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$22" class="0">
@@ -6869,7 +6946,7 @@ XTAILS CAPS</text>
 <junction x="-198.12" y="-10.16"/>
 </segment>
 </net>
-<net name="N$48" class="0">
+<net name="GND" class="0">
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="C2" gate="G$1" pin="2"/>
@@ -7004,7 +7081,8 @@ XTAILS CAPS</text>
 <wire x1="142.24" y1="22.86" x2="142.24" y2="45.72" width="0.1524" layer="91"/>
 <junction x="142.24" y="22.86"/>
 <junction x="142.24" y="45.72"/>
-<wire x1="-147.32" y1="-38.1" x2="-129.54" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="-147.32" y1="-38.1" x2="-137.16" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="-137.16" y1="-38.1" x2="-129.54" y2="-38.1" width="0.1524" layer="91"/>
 <wire x1="-129.54" y1="-38.1" x2="-93.98" y2="-38.1" width="0.1524" layer="91"/>
 <wire x1="-93.98" y1="-38.1" x2="-93.98" y2="-2.54" width="0.1524" layer="91"/>
 <junction x="-147.32" y="-38.1"/>
@@ -7043,9 +7121,11 @@ XTAILS CAPS</text>
 <pinref part="C4" gate="G$1" pin="2"/>
 <wire x1="-119.38" y1="55.88" x2="-119.38" y2="45.72" width="0.1524" layer="91"/>
 <junction x="-119.38" y="45.72"/>
+<pinref part="SUPPLY1" gate="GND" pin="GND"/>
+<junction x="-137.16" y="-38.1"/>
 </segment>
 </net>
-<net name="N$49" class="0">
+<net name="VCC" class="0">
 <segment>
 <pinref part="C3" gate="G$1" pin="2"/>
 <pinref part="C4" gate="G$1" pin="1"/>
@@ -7160,7 +7240,8 @@ XTAILS CAPS</text>
 <wire x1="-236.22" y1="-2.54" x2="-223.52" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="-223.52" y1="30.48" x2="-193.04" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="-193.04" y1="30.48" x2="-182.88" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="-182.88" y1="30.48" x2="-144.78" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-182.88" y1="30.48" x2="-167.64" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-167.64" y1="30.48" x2="-144.78" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="-144.78" y1="30.48" x2="-144.78" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="AVCC"/>
 <wire x1="-144.78" y1="20.32" x2="-149.86" y2="20.32" width="0.1524" layer="91"/>
@@ -7183,7 +7264,8 @@ XTAILS CAPS</text>
 <wire x1="-193.04" y1="15.24" x2="-193.04" y2="30.48" width="0.1524" layer="91"/>
 <junction x="-193.04" y="30.48"/>
 <pinref part="J5" gate="G$1" pin="3"/>
-<wire x1="-144.78" y1="50.8" x2="-170.18" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="-144.78" y1="50.8" x2="-160.02" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="-160.02" y1="50.8" x2="-170.18" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="-170.18" y1="50.8" x2="-170.18" y2="55.88" width="0.1524" layer="91"/>
 <junction x="-144.78" y="50.8"/>
 <pinref part="U1" gate="G$1" pin="AREF"/>
@@ -7217,6 +7299,12 @@ XTAILS CAPS</text>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="-81.28" y1="43.18" x2="-81.28" y2="50.8" width="0.1524" layer="91"/>
 <junction x="-81.28" y="50.8"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="-226.06" y1="-5.08" x2="-223.52" y2="-5.08" width="0.1524" layer="91"/>
+<pinref part="P+1" gate="VCC" pin="VCC"/>
+<junction x="-160.02" y="50.8"/>
+<pinref part="P+2" gate="VCC" pin="VCC"/>
+<junction x="-167.64" y="30.48"/>
 </segment>
 </net>
 </nets>
