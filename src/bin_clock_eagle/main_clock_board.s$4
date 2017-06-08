@@ -6585,7 +6585,7 @@ BATT</text>
 <instance part="C9" gate="G$1" x="35.56" y="33.02"/>
 <instance part="C10" gate="G$1" x="35.56" y="5.08"/>
 <instance part="C11" gate="G$1" x="35.56" y="-17.78"/>
-<instance part="C12" gate="G$1" x="45.72" y="-63.5" rot="R90"/>
+<instance part="C12" gate="G$1" x="43.18" y="-58.42" rot="R270"/>
 <instance part="C13" gate="G$1" x="111.76" y="33.02"/>
 <instance part="C14" gate="G$1" x="111.76" y="7.62"/>
 <instance part="C15" gate="G$1" x="111.76" y="-20.32"/>
@@ -7353,9 +7353,9 @@ BATT</text>
 <pinref part="C9" gate="G$1" pin="2"/>
 <wire x1="27.94" y1="22.86" x2="35.56" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="22.86" x2="35.56" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="C12" gate="G$1" pin="1"/>
-<wire x1="43.18" y1="-63.5" x2="27.94" y2="-63.5" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="-63.5" x2="27.94" y2="-53.34" width="0.1524" layer="91"/>
+<pinref part="C12" gate="G$1" pin="2"/>
+<wire x1="38.1" y1="-58.42" x2="27.94" y2="-58.42" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="-58.42" x2="27.94" y2="-53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -7631,9 +7631,9 @@ BATT</text>
 <pinref part="C9" gate="G$1" pin="1"/>
 <wire x1="30.48" y1="38.1" x2="35.56" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="38.1" x2="35.56" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="C12" gate="G$1" pin="2"/>
-<wire x1="50.8" y1="-63.5" x2="58.42" y2="-63.5" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="-63.5" x2="58.42" y2="-38.1" width="0.1524" layer="91"/>
+<pinref part="C12" gate="G$1" pin="1"/>
+<wire x1="45.72" y1="-58.42" x2="58.42" y2="-58.42" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="-58.42" x2="58.42" y2="-38.1" width="0.1524" layer="91"/>
 <junction x="58.42" y="-38.1"/>
 </segment>
 </net>
